@@ -43,13 +43,17 @@ public class EchoBot extends TelegramLongPollingBot {
         } else if (textoMensagem.startsWith("hora")) {
             resposta = getHora();
         } else if (textoMensagem.startsWith("ola") || textoMensagem.startsWith("olá") || textoMensagem.startsWith("oi")) {
-            resposta = "\uD83E\uDD16 Olá, vejo que você entende muito sobre BOTS!";
+            resposta = "\uD83D\uDC41️\u200D\uD83D\uDDE8 Olá, em algum momento responderei sua mensagem, ou nunca!";
         } else if (textoMensagem.startsWith("quem é você") || textoMensagem.startsWith("quem e voce")) {
-            resposta = "\uD83E\uDD16 Eu sou um bot";
+            resposta = "\uD83E\uDD16 Eu sou um bot apaixonado e você?";
         } else if (textoMensagem.startsWith("/help")) {
-            resposta = "Utilize um dos comandos:\nolá\ndata\nhora\nquem é você?";
+            resposta = "Utilize um dos comandos:\nolá\ndata\nhora\npoesia\nquem é você?";
+        } else if (textoMensagem.startsWith("matuto")) {
+            resposta = "\uD83D\uDE21 Esse aí não vale nada...";
+        } else if (textoMensagem.startsWith("poesia")) {
+            resposta =" ❤️\u200D\uD83D\uDD25 Que não seja imortal, posto que é chama; mas que seja infinito enquanto dure";
         } else {
-            resposta = "Não entendi!\nDigite /help para ver os comandos disponíveis.";
+            resposta = "Calma, ainda estou aprendendo! Quer que eu te recite uma poesia?\nDigite /help para ver os comandos disponíveis.";
         }
 
         return SendMessage.builder()
